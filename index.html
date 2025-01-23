@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio BTS SIO SISR</title>
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Lien vers la police pixelisée -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="catvideo2.mp4" type="video/mp4">
+            <source src="catvideo.webm" type="video/webm">
+            <source src="catvideo.ogv" type="video/ogg">
+            Votre navigateur ne supporte pas les vidéos HTML5.
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <header>
+        <nav class="nav-menu">
+            <a href="#Accueil">Accueil</a>
+            <a href="#A propos">A propos</a>
+            <a href="#compétences">Compétences</a>
+            <a href="#projects">Projets</a>
+            <a href="#languages">Langues</a>
+            <a href="#technologies">Technologies</a>
+        </nav>
+        <div class="social-links">
+            <a href="https://www.instagram.com/ayb.mk/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="32"></a>
+            <a href="https://www.linkedin.com/in/ayoub-mourkia-254332320/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="32"></a>
+            <a href="https://github.com/ay-mk" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width="32"></a>
+        </div>
+    </header>
+    
+    <section id="Accueil">
+        <div class="main">
+            <img src="IMG_6040.png" alt="Photo de toi">
+            <h1>Ayoub MOURKIA</h1>
+            <h2>Étudiant en Bac +2 Services Informatiques aux Organisations <br>au Sein du centre de formation ISCB</br></h2>
+            <div class="animated-text" id="animated-text">Alternant BTS SIO option SISR...</div>
+            <div class="arrow" onclick="scrollToSection('compétences')">&#8595;</div>
+        </div>
+    </section>
+    
+    <!-- Section "Qui suis-je ?" -->
+    <section id="A propos">
+        <h4>A propos</h4>
+        <div class="card-container">
+            <div class="card2">
+                <br><h5>Qui suis-je ?</h5></br>
+                <div class="text-content">
+                <p>Je m'appelle <span class="important">Ayoub MOURKIA</span>, étudiant en première année de Bac+2 et alternant à la Mairie de Joué-Lès-Tours.</p>
+                    <p>Passionné d'informatique, je me spécialise en cybersécurité, domaine où je souhaite bâtir ma carrière. </p>           
+                    <p>Mon objectif est d'intégrer une école d'ingénieurs pour approfondir mes compétences et relever les défis de la protection des systèmes dans un monde toujours plus connecté.</p>
+            
+                </div>
+            </div>
+        </div>
+        <div class="arrow" onclick="scrollToSection('compétences')">&#8595;</div>
+    </section>
+
+    <section id="compétences">
+        <h4>Compétences</h4>
+        <div class="card-container">
+            <div class="card">
+                <h5>Réseaux</h5>
+                <p>Configuration, routage et sécurité des réseaux.</p>
+            </div>
+            <div class="card">
+                <h5>Serveurs</h5>
+                <p>Installation et gestion des serveurs sous Linux et Windows.</p>
+            </div>
+            <div class="card">
+                <h5>Développement</h5>
+                <p>Développement web et gestion de base de données.</p>
+            </div>
+        </div>
+        <div class="arrow" onclick="scrollToSection('projects')">&#8595;</div>
+    </section>
+    <section id="projects">
+        <h4>Projets</h4>
+        <div class="card-container">
+            <div class="card">
+                <h5>Projet 1</h5>
+                <p>Description du projet.</p>
+            </div>
+            <div class="card">
+                <h5>Projet 2</h5>
+                <p>Description du projet.</p>
+            </div>
+        </div>
+        <div class="arrow" onclick="scrollToSection('languages')">&#8595;</div>
+    </section>
+
+    <section id="languages">
+        <h4>Langues</h4>
+        <div class="card-container">
+            <div class="card">
+                <h5>Français</h5>
+                <p>Niveau avancé.</p>
+            </div>
+            <div class="card">
+                <h5>Anglais</h5>
+                <p>Niveau intermédiaire.</p>
+            </div>
+        </div>
+        <div class="arrow" onclick="scrollToSection('technologies')">&#8595;</div>
+    </section>
+    <section id="technologies">
+        <h4>Technologies</h4>
+        <div class="card-container1">
+            <!-- Conteneur de la première ligne -->
+            <div class="card-line">
+                <div class="card3">
+                    <img src=".\Windows.png" alt="Windows" width="100">
+                    <h5>Windows</h5>
+                    <p>Système d'exploitation de Microsoft...</p>
+                </div>
+                <div class="card3">
+                    <img src=".\Apple.png" alt="Apple" width="100">
+                    <h5>Apple</h5>
+                    <p>Système d'exploitation macOS...</p>
+                </div>
+                <div class="card3">
+                    <img src=".\linux.png" alt="Linux" width="100">
+                    <h5>Linux</h5>
+                    <p>(Administration de serveurs et systèmes Linux)...</p>
+                </div>
+                <div class="card3">
+                    <img src=".\mariadb.png" alt="MariaDB" width="100">
+                    <h5>MariaDB</h5>
+                    <p>Base de données relationnelle...</p>
+                </div>
+                <div class="card3">
+                    <img src=".\Apache.png" alt="Apache" width="100">
+                    <h5>Apache</h5>
+                    <p>Serveur web open source...</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-container1">
+            <!-- Conteneur de la deuxième ligne -->
+            <div class="card-line">
+                <div class="card4">
+                    <img src=".\php.png" alt="PHP" width="100">
+                    <h5>PHP</h5>
+                    <p>Langage de script côté serveur...</p>
+                </div>
+                <div class="card4">
+                    <img src=".\HTML.png" alt="HTML" width="100">
+                    <h5>HTML</h5>
+                    <p>Langage de balisage utilisé pour structurer...</p>
+                </div>
+                <div class="card4">
+                    <img src=".\CSS.png" alt="CSS" width="100">
+                    <h5>CSS</h5>
+                    <p>Langage de style utilisé pour définir...</p>
+                </div>
+                <div class="card4">
+                    <img src=".\JAVASCRIPT.png" alt="JavaScript" width="100">
+                    <h5>JavaScript</h5>
+                    <p>Utilisation du langage pour rendre les pages interactives...</p>
+                </div>
+                <div class="card4">
+                    <img src=".\Python.png" alt="Python" width="100">
+                    <h5>Python</h5>
+                    <p>Utilisation dans des scripts et le développement d'applications simples...</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ayoub. Tous droits réservés.</p>
+    </footer>
+
+      <!-- Script JavaScript -->
+  <script src="script.js"></script>    
+</body>
+</html>
