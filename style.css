@@ -1,0 +1,456 @@
+        @font-face {
+            font-family: 'Elaine Sans Black';
+            src: url('./police/ElaineSans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+
+            font-family: 'ElaineSansBold';
+            src: url('./police/ElaineSans-Bold.ttf') format('truetype');
+            font-weight: normal;
+            font-weight: bold;
+
+
+            font-family: 'DharmaGothicE';
+            src: url('./police/DharmaGothicE-RegularItalic.ttf') format('truetype');
+            font-weight: normal;
+            font-style: italic;
+            
+        }
+
+        body {
+            margin: 0;
+            padding-right: 40px; /* Ajuste cette valeur selon tes besoins */
+            font-family: 'Elaine Sans Black', sans-serif; /* Utilisation uniquement de la police Elaine Sans Black */
+            color: #fff;
+            overflow-x: hidden;
+            overflow: -moz-scrollbars-none; /* Firefox */
+            -ms-overflow-style: none; /* Internet Explorer */
+          }
+          
+          body::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, et autres basés sur WebKit */
+          }
+
+          h2, h3 {
+            font-family: 'ElaineSansBold', sans-serif;
+        }
+        
+
+        p {
+            font-family: 'ElaineSansBold', sans-serif !important; /* Forcer l'utilisation */
+            font-size: 18px; /* Ajuster la taille */
+            line-height: 1.6;
+            color: white;
+        }
+
+        h4 {
+            font-family: 'DharmaGothicE', sans-serif; /* Appliquer la nouvelle police */
+            font-size: 55px; /* Taille assez grande */
+            color: white; /* Couleur blanche */
+            text-transform: uppercase; /* Texte en majuscules */
+            letter-spacing: 2px; /* Espacement entre les lettres */
+            margin: 20px 0;
+            animation: fadeIn 2s ease-in-out; /* Animation d’apparition */
+            text-shadow:  
+            0px 0px 8px rgba(255, 255, 255, 0.6), /* Lueur interne douce */
+            0px 0px 16px rgba(255, 255, 255, 0.4), /* Lueur étendue */
+            4px 4px 6px rgba(0, 0, 0, 0.9);       /* Ombre noire intense */
+         }
+
+        h5 {
+            font-family: 'DharmaGothicE', sans-serif; /* Appliquer la nouvelle police */
+            font-size: 30px; /* Taille assez grande */
+            color: white; /* Couleur blanche */
+            text-transform: uppercase; /* Texte en majuscules */
+            letter-spacing: 2px; /* Espacement entre les lettres */
+            margin: 20px 0;
+            text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.9);       /* Ombre noire intense */
+        }
+        
+        /* Animation pour l’effet d’apparition */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px); /* Déplacement vers le haut */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* Position normale */
+            }
+        }
+
+        .important{
+            color: #d229d8;
+        }
+        
+        /* Conteneur vidéo */
+        .video-container {
+            position: fixed; /* Fixe la vidéo à l'écran, même lors du défilement */
+            top: 0; /* En haut de l'écran */
+            left: 0; /* À gauche de l'écran */
+            width: 100vw; /* Largeur de la fenêtre */
+            height: 100vh; /* Hauteur de la fenêtre */
+            z-index: -1;  /* Assure que la vidéo est en arrière-plan */
+            overflow: hidden; /* Masque tout ce qui dépasse */
+        }
+
+        /* Vidéo à l'intérieur du conteneur */
+        .video-container video {
+            position: absolute; /* Position absolue par rapport au conteneur */
+            top: 50%; /* Centre la vidéo verticalement */
+            left: 50%; /* Centre la vidéo horizontalement */
+            width: 100vw; /* Vidéo prend toute la largeur de l'écran */
+            height: 100vh; /* Vidéo prend toute la hauteur de l'écran */
+            object-fit: cover; /* La vidéo couvre toute la surface sans déformation */
+            transform: translate(-50%, -50%); /* Déplace la vidéo pour qu'elle soit centrée */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(76, 13, 148, 0.699); /* Fond noir */
+            opacity: 0; /* Commence transparent */
+            transition: opacity 0.5s ease; /* Transition fluide de l'opacité */
+        }
+
+        .content {
+            height: 200vh; /* Simule un contenu long pour permettre le scroll */
+            padding: 20px;
+            background: #ff0000; /* Fond clair pour le contenu */
+        }
+
+
+
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 10px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+            /* Styles spécifiques pour le texte animé */
+            .animated-text {
+            font-family: 'VT323', monospace; /* Application de la police VT323 */
+              font-size: 38px;
+              color: #665b5b; /* Texte en vert style rétro */
+              white-space: nowrap;
+              overflow: hidden;
+              display: inline-block;
+              border-right: 2px solid #6e6a6a; /* Curseur visible */
+              animation: typing 4s steps(50, end), blink 0.6s step-end infinite;
+            }
+
+    /* Animation d'apparition progressive du texte */
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    /* Animation de clignotement du curseur */
+    @keyframes blink {
+      from {
+        border-color: #6e6a6a;
+      }
+      to {
+        border-color: transparent;
+      }
+    }
+
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+            justify-content: center; /* Centre les éléments horizontalement */
+            width: fit-content;      /* La largeur correspond au contenu */
+            margin: 0 auto;          /* Centre le menu dans le conteneur parent */
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #5e06d1;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+            transform: translateX(-20px); /* Déplace le conteneur vers la gauche */
+        }
+
+        .social-links a img {
+            width: 32px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a img:hover {
+            transform: scale(1.2);
+        }
+
+        .language-selector {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .language-selector select {
+            padding: 5px;
+            background: #000;
+            color: #fff;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            margin-top: 60px; /* Compense la hauteur du menu fixe */
+        }
+
+        .main img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .main h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        .main h2 {
+            font-size: 2rem;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        /* Style de la flèche */
+        .arrow {
+            margin-top: 30px;
+            cursor: pointer;
+            font-size: 40px;
+            display: inline-block;
+            color: #fff;
+            transition: color 0.1s ease; /* Transition rapide */
+            animation: bounce 1s infinite alternate; /* Animation de rebond */
+        }
+
+        /* Effet de survol de la flèche */
+        .arrow:hover {
+            color: #d229d8; /* Change la couleur au survol */
+        }
+
+        /* Animation de rebond (bounce) */
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px); /* Petite élévation pendant le rebond */
+            }
+        }
+
+
+
+        section {
+            padding: 100px 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+            width: 100%;
+        }
+
+        section.black-bg {
+            background: rgba(0, 0, 0, 1);
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%; /* Prend toute la largeur */
+            margin: 0;   /* Supprime les marges par défaut */
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        .card-container1 {
+            display: flex;
+            flex-wrap: nowrap; /* Les cartes restent sur la même ligne */
+            gap: 20px; /* Ajoute un espace entre les cartes */
+            justify-content: flex-start; /* Aligne les cartes à gauche */
+            overflow-x: auto; /* Permet le défilement horizontal */
+            padding: 20px; /* Ajoute un padding pour l'espace autour du conteneur */
+            scroll-snap-type: x mandatory; /* Permet un "snapping" sur les cartes quand on fait défiler */
+            -ms-overflow-style: none; /* Masque la barre de défilement pour les navigateurs IE */
+            scrollbar-width: none; /* Masque la barre de défilement pour Firefox */
+            transition: transform 0.3s ease-out; /* Ajout d'une transition fluide */
+        }
+
+        .card-container1::-webkit-scrollbar {
+           display: none; /* Cache la barre de défilement pour les navigateurs Webkit (Chrome, Safari) */
+        }
+
+        .card-container1:active {
+            cursor: grabbing; /* Change le curseur lors de l'interaction */
+        }
+
+        .card-container1 img {
+            user-select: none; /* Empêche la sélection */
+            pointer-events: none; /* Empêche les événements de la souris (comme le drag-and-drop) */
+        }
+
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap; /* Permet aux cartes de passer à la ligne suivante */
+            gap: 20px; /* Ajoute un espace entre les cartes */
+            justify-content: center; /* Centre les cartes sur la page */
+        }
+
+        .card-container2 {
+            display: flex;
+            flex-wrap: wrap; /* Permet aux cartes de passer à la ligne suivante */
+            gap: 20px; /* Ajoute un espace entre les cartes */
+            justify-content: center; /* Centre les cartes sur la page */
+        }
+
+
+        .card-container3 {
+            display: flex;
+            flex-wrap: wrap; /* Permet aux cartes de passer à la ligne suivante */
+            gap: 20px; /* Ajoute un espace entre les cartes */
+            justify-content: center; /* Centre les cartes sur la page */
+        }
+
+        .card-line {
+           display: flex;
+           flex-wrap: nowrap; /* Empêche les cartes de passer à la ligne suivante */
+           gap: 20px; /* Ajoute un espace entre les cartes */
+           margin-bottom: 30px; /* Ajoute un espacement entre les lignes */
+           scroll-snap-align: start; /* Aligne les cartes avec le début du conteneur pendant le défilement */
+        }
+
+        .card2 {
+            background: rgba(0, 0, 0, 0.6); /* Opacité noire à 40% */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+            color: #fff;
+            width: 800px; /* Augmenter la largeur */
+            height: 600px; /* Augmenter la hauteur */
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            scroll-snap-align: center; /* Aligne chaque carte avec le centre lors du défilement */
+        }
+
+        .text-content {
+            max-width: 600px; /* Limite la largeur du texte */
+            margin: 0 auto; /* Centre le texte horizontalement */
+            text-align: left; /* Ajuste l'alignement si nécessaire */
+        }
+
+
+        .card {
+            background: rgba(0, 0, 0, 0.6); /* Opacité noire à 40% */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            color: #fff;
+            width: 600px; /* Augmenter la largeur */
+            height: 400px; /* Augmenter la hauteur */
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            scroll-snap-align: center; /* Aligne chaque carte avec le centre lors du défilement */
+        }
+
+
+        .card3 {
+            background: rgba(0, 0, 0, 0.6); /* Opacité noire à 40% */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            color: #fff;
+            width: 500px; /* Augmenter la largeur */
+            height: 300px; /* Augmenter la hauteur */
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            scroll-snap-align: center; /* Aligne chaque carte avec le centre lors du défilement */
+        }
+        .card3 {
+            user-select: none; /* Empêche la sélection du texte */
+            margin: 0;
+        }
+
+
+
+
+        .card4 {
+            background: rgba(0, 0, 0, 0.6); /* Opacité noire à 40% */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            color: #fff;
+            width: 500px; /* Augmenter la largeur */
+            height: 300px; /* Augmenter la hauteur */
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            scroll-snap-align: center; /* Aligne chaque carte avec le centre lors du défilement */
+        }
+        .card4 {
+            user-select: none; /* Empêche la sélection du texte */
+            margin: 0;
+        }
+
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin: 10px 0;
+        }
+
+        .card img {
+            margin-bottom: 15px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
